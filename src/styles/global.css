@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 html {
   background-color: #333333;
-  font-family: sans-serif;
 }
 
 body {
@@ -12,8 +13,17 @@ body {
 	color: #dddddd;
 }
 
+p {
+	font-family: 'Georgia', 'serif';
+}
+
+
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Tahoma', 'sans-serif';
 }
 
 h1 {
@@ -56,12 +66,12 @@ a,a:visited, a:hover {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-	border: white 5px solid;
 	margin-bottom: 5px;
+	font-family: 'Verdana', 'sans-serif';
 }
 
 .nav-links a:hover, a:focus {
-  background-color: #666666;
+	text-decoration: underline;
 }
 
 .expanded {
@@ -70,7 +80,7 @@ a,a:visited, a:hover {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
+		text-align: right;
     display: block;
     position: static;
     width: auto;
