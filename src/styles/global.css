@@ -7,7 +7,7 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
+  max-width: 1080px;
   padding: 1rem;
   line-height: 1.5;
 	color: #dddddd;
@@ -36,6 +36,19 @@ a,a:visited, a:hover {
 	color: #ffffff;
 }
 
+header h2 {
+	margin-top: 0px;
+}
+
+header h1 {
+	margin-bottom: 3px;
+}
+
+.content {
+	width: 80ch;
+	margin: 0 auto;
+}
+
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -50,20 +63,19 @@ a,a:visited, a:hover {
 }
 
 .nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
+  width: auto;
+	position: static;
 	background: none;
-  display: none;
+  display: block;
   margin: 0;
+	text-align: right;
 }
 
 .nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
+  display: inline-block;
+  padding: 15px 20px;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-transform: uppercase;
 	margin-bottom: 5px;
@@ -78,19 +90,31 @@ a,a:visited, a:hover {
   display: unset;
 }
 
-@media screen and (min-width: 636px) {
-  .nav-links {
-		text-align: right;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
+.blog-posts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 45px 5px;
+	align-items: flex-end;
+	justify-content: start;
+}
 
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
+.blog-post {
+	text-decoration: none;
+}
+
+.blog-post img {
+	max-width: 600px;
+}
+
+.blog-post h2 {
+	margin: 3px 0px;
+}
+
+.blog-post p {
+ margin: 0px;
+} 
+
+@media screen and (min-width: 636px) {
 
 	.hamburger {
 		display: none;

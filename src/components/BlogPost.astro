@@ -1,0 +1,11 @@
+---
+const { url, title, image, description } = Astro.props;
+---
+<style>
+</style>
+
+<a href={url} class="blog-post">
+	<img src={image} />
+	<h2>{title}</h2>
+	<p>{description}</p>
+</a>
