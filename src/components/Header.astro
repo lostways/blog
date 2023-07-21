@@ -4,9 +4,9 @@ import Navigation from './Navigation.astro';
 const {pageTitle, subtitle} = Astro.props;
 ---
 <header>
-	<nav>
-		<Navigation />
-	</nav>
-	<h1>{pageTitle}</h1>
-	<h2>{subtitle}</h2>
+	<div class="nav-title">
+		<h1>{pageTitle}</h1>
+		<h2>{subtitle}</h2>
+	</div>
+	<Navigation />
 </header>
