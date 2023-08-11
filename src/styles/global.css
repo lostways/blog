@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Roboto&display=swap');
+:root {
+	--gray-10: hsl(258, 7%, 10%);
+	--gray-20: hsl(258, 7%, 20%);
+	--gray-30: hsl(258, 7%, 30%);
+	--gray-40: hsl(258, 7%, 40%);
+	--gray-50: hsl(258, 7%, 50%);
+	--gray-60: hsl(258, 7%, 60%);
+	--gray-70: hsl(258, 7%, 70%);
+	--gray-80: hsl(258, 7%, 80%);
+	--gray-90: hsl(258, 7%, 90%);
+	--orange: #ff5d01;
+}
+
+* {
+	box-sizing: border-box;
+}
+
 html {
-  background-color: #333333;
 }
 
 body {
@@ -9,7 +25,8 @@ body {
   max-width: 1080px;
   padding: 1rem;
   line-height: 1.5;
-	color: #ededed;
+	color: var(--gray-80);
+	background-color: var(--gray-10);
 }
 
 p {
@@ -31,10 +48,12 @@ h1 {
 	color: #eeeeee;
 	font-weight: normal;
 	font-family: 'Cormorant Garamond', serif;
+	text-transform: capitalize;
 }
 
 a,a:visited, a:hover {
-	color: #ffffff;
+	color: var(--gray-90);
+	text-decoration: none;
 }
 
 header {
@@ -121,6 +140,10 @@ footer {
 	margin-top: 2rem;
 	justify-content: right;
 	color: #dddddd;
+}
+
+footer a {
+	text-decoration: underline;
 }
 
 @media screen and (min-width: 636px) {
