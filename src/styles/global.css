@@ -25,7 +25,7 @@ body {
   max-width: 1080px;
   padding: 1rem;
   line-height: 1.5;
-	color: var(--gray-80);
+	color: var(--gray-90);
 	background-color: var(--gray-10);
 }
 
@@ -40,12 +40,13 @@ p {
 
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
+	color: var(--gray-80);
 }
 
 h1 {
   margin: 1rem 0;
   font-size: 4rem;
-	color: #eeeeee;
+	color: var(--gray-80);
 	font-weight: normal;
 	font-family: 'Cormorant Garamond', serif;
 	text-transform: capitalize;
@@ -68,6 +69,7 @@ header nav {
 
 header h2 {
 	margin-top: 0px;
+	color: var(--gray-70);
 }
 
 header h1 {
@@ -96,12 +98,12 @@ header h1 {
   text-transform: uppercase;
 	margin-bottom: 5px;
 	font-family: 'Roboto', sans-serif;
-	color: #e8e8e8;
+	color: var(--gray-70);
 }
 
 .nav-links a:hover, a:focus {
 	text-decoration: none;
-	color: #ffd380;
+	color: var(--gray-90);
 }
 
 .expanded {
@@ -132,7 +134,27 @@ header h1 {
 
 .blog-post p {
  margin: 0px;
+ color: var(--gray-70);
 } 
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+
+.tag {
+	margin: 0.25em;
+	border: dotted 1px var(--gray-50);
+	border-radius: .5em;
+	padding: .5em 1em;
+  font-family: 'Roboto', sans-serif;
+	font-size: 1.15em;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: var(--gray-20);
+}
 
 footer {
 	display: flex;
