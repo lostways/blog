@@ -27,11 +27,10 @@ body {
   line-height: 1.5;
 	color: var(--gray-90);
 	background-color: var(--gray-10);
+	
 }
 
 canvas {
-	width: 100%;
-	height: 100%;
 }
 
 p {
@@ -193,11 +192,12 @@ footer a {
 }
 
 .background-sphere {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
+	height: auto;
 	z-index: -1;
 }
 

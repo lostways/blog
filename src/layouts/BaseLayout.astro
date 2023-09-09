@@ -16,7 +16,6 @@ const { pageTitle, subtitle } = Astro.props;
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<WireframeSphere />
 		<Header pageTitle={pageTitle} subtitle={subtitle} />
 		<div class="content">
 			<slot />
@@ -25,4 +24,5 @@ const { pageTitle, subtitle } = Astro.props;
 		<script>
 		</script>
 	</body>
+			<WireframeSphere />
 </html>
