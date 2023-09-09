@@ -107,8 +107,9 @@ header .fancy-logo-thing {
 	position: static;
 	background: none;
   margin: 0;
-	flex-grow: 0;
+	flex-grow: 1;
 	align-self: start;
+	text-align: right;
 }
 
 .nav-links a {
@@ -184,10 +185,20 @@ footer {
 	margin-top: 2rem;
 	justify-content: right;
 	color: #dddddd;
+	background-color: transparent;
 }
 
 footer a {
 	text-decoration: underline;
+}
+
+.background-sphere {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 }
 
 @media screen and (min-width: 636px) {

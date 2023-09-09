@@ -1,4 +1,4 @@
-<canvas id="canvas"></canvas>
+<canvas class="background-sphere" id="canvas"></canvas>
 <script>
 	/**
 	 * Example: Displays a rotating wireframe sphere
@@ -34,7 +34,7 @@
 		}
 
 		update(event) {
-			event.target.rotation.y -= 0.005;
+			event.target.rotation.x += 0.2 / 1000;
 		}
 	}
 
@@ -42,13 +42,15 @@
 	let wrapper = new ThreeJSWrapper(canvas);
 
 	//create entitites
-	let sphere = new WireframeSphere({ z: -17, color: 0xe5e4e7 });
+	let sphere = new WireframeSphere({ z: -12, y: 0, x: -1, color: 0x663333 } );
 
 	//add enitities
 	wrapper.addEntity(sphere);
 
 	//position controls
-	wrapper.controls.target.set(0, 0, -17);
+	//wrapper.controls.target.set(0, 0, -15);
+
+	wrapper.controls.enabled = false;
 
 	//make transparent
 	wrapper.renderer.setClearAlpha(0);

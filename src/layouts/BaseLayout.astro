@@ -16,6 +16,7 @@ const { pageTitle, subtitle } = Astro.props;
 		<title>{pageTitle}</title>
 	</head>
 	<body>
+		<WireframeSphere />
 		<Header pageTitle={pageTitle} subtitle={subtitle} />
 		<div class="content">
 			<slot />
