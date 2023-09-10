@@ -1,60 +1,124 @@
 <canvas class="background-sphere" id="canvas"></canvas>
 <script>
-	/**
-	 * Example: Displays a rotating wireframe sphere
-	 **/
-	import ThreeJSWrapper from "three-js-wrapper";
-	import { ThreeJSEntity } from "three-js-wrapper";
+  /**
+   * Example: Displays a rotating wireframe sphere
+   **/
+  import ThreeJSWrapper from "three-js-wrapper";
+  import { ThreeJSEntity } from "three-js-wrapper";
 
-	//wireframe sphere
-	class WireframeSphere extends ThreeJSEntity {
-		create() {
-			const {
-				x = 0,
-				y = 0,
-				z = 0,
-				radius = 10,
-				segments = 16,
-				rings = 16,
-				color = 0xcc0000,
-			} = this.params;
+  //wireframe sphere
+  class WireframeSphere extends ThreeJSEntity {
+    create() {
+      const {
+        x = 0,
+        y = 0,
+        z = 0,
+        radius = 10,
+        segments = 16,
+        rings = 16,
+        color = 0xcc0000,
+      } = this.params;
 
-			let material = new this.THREE.MeshBasicMaterial({
-				wireframe: true,
-				color: color,
-			});
-			let geo = new this.THREE.SphereGeometry(radius, segments, rings);
-			let obj3d = new this.THREE.Mesh(geo, material);
+      let material = new this.THREE.MeshBasicMaterial({
+        wireframe: true,
+        color: color,
+      });
+      let geo = new this.THREE.SphereGeometry(radius, segments, rings);
+      let obj3d = new this.THREE.Mesh(geo, material);
 
-			obj3d.position.z = z;
-			obj3d.position.y = y;
-			obj3d.position.x = x;
+      obj3d.position.z = z;
+      obj3d.position.y = y;
+      obj3d.position.x = x;
 
-			return obj3d;
-		}
+      obj3d.rotation.x = 90;
 
-		update(event) {
-			event.target.rotation.x += 0.2 / 1000;
-		}
-	}
+      return obj3d;
+    }
 
-	let canvas = document.getElementById("canvas");
-	let wrapper = new ThreeJSWrapper(canvas);
+    update(event) {
+      event.target.rotation.x -= 0.2 / 1000;
+    }
+  }
 
-	//create entitites
-	let sphere = new WireframeSphere({ z: -12, y: 0, x: -1, color: 0x663333 } );
+  let canvas = document.getElementById("canvas");
+  let wrapper = new ThreeJSWrapper(canvas);
 
-	//add enitities
-	wrapper.addEntity(sphere);
+  //create entitites
+  //randomly position spheres
+  function rand_coord() {
+    let x = Math.random() * 18 + 1;
+    return (x *= Math.floor(Math.random() * 2) == 1 ? 1 : -1);
+  }
 
-	//position controls
-	//wrapper.controls.target.set(0, 0, -15);
+  //check that no spheres are overlapping
+  //if they are, reposition them
+  function check_overlap(objects) {
+    let overlap = false;
+    for (let i = 0; i < objects.length; i++) {
+      for (let j = 0; j < objects.length; j++) {
+        if (i != j) {
+          let dist = objects[i].object3d.position.distanceTo(
+            objects[j].object3d.position
+          );
+          if (dist < 18) {
+            objects[i].object3d.position.y = rand_coord();
+            objects[i].object3d.position.x = rand_coord();
+            objects[i].object3d.position.z = z;
+            overlap = true;
+          }
+        }
+      }
+    }
+    if (overlap) {
+      check_overlap(objects);
+    }
+  }
 
-	wrapper.controls.enabled = false;
+  let z = -50;
+  let spheres = [
+    new WireframeSphere({
+      z: z,
+      y: rand_coord(),
+      x: rand_coord(),
+      color: 0x663333,
+    }),
+    new WireframeSphere({
+      z: z,
+      y: rand_coord(),
+      x: rand_coord(),
+      color: 0x663333,
+    }),
+    new WireframeSphere({
+      z: z,
+      y: rand_coord(),
+      x: rand_coord(),
+      color: 0x663333,
+    }),
+    new WireframeSphere({
+      z: z,
+      y: rand_coord(),
+      x: rand_coord(),
+      color: 0x663333,
+    }),
+  ];
 
-	//make transparent
-	wrapper.renderer.setClearAlpha(0);
+  check_overlap(spheres);
 
-	//start wrapper
-	wrapper.start();
+  //add enitities
+  for (let i = 0; i < spheres.length; i++) {
+    wrapper.addEntity(spheres[i]);
+  }
+
+  //position controls
+  wrapper.controls.target.set(0, 0, -50);
+
+  wrapper.controls.enableZoom = false;
+
+  //make transparent
+  wrapper.renderer.setClearAlpha(0);
+
+  wrapper.camera.fov = 32;
+
+  //start wrapper
+  wrapper.start();
 </script>
