@@ -15,5 +15,8 @@
     "astro": "^2.8.0",
     "preact": "^10.16.0",
     "three-js-wrapper": "^1.1.0"
+  },
+  "devDependencies": {
+    "@inkdropapp/live-export": "^0.2.1"
   }
 }
