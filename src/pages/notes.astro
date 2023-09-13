@@ -2,14 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 const allPosts = await Astro.glob('../pages/posts/*.md');
-const pageTitle = "Blog";
-const subtitle = "Notes from the journey";
+const pageTitle = "Notes";
+const subtitle = "Notes on the way";
 const tags = [...new Set(allPosts.flatMap(post => post.frontmatter.tags))];
 ---
 <BaseLayout pageTitle={pageTitle} subtitle={subtitle}>
-	<div class="tags">
-		{tags.map((tag) => <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>)}
-	</div>
 	<div class="blog-posts">
 		{allPosts.map((post) => (
 			<BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.image.url}></BlogPost>
