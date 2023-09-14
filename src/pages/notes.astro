@@ -6,10 +6,10 @@ const pageTitle = "Notes";
 const subtitle = "Notes on the way";
 const tags = [...new Set(allPosts.flatMap(post => post.frontmatter.tags))];
 ---
-<BaseLayout pageTitle={pageTitle} subtitle={subtitle}>
+<BaseLayout pageTitle={pageTitle}>
 	<div class="blog-posts">
 		{allPosts.map((post) => (
-			<BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.image.url}></BlogPost>
+			<BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.heroImage}></BlogPost>
 		))}
 	</div>
 </BaseLayout>

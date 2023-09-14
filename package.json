@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "live-import": "node --experimental-vm-modules tools/import.mjs"
   },
   "dependencies": {
     "@astrojs/preact": "^2.2.2",
