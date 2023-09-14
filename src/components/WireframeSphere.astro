@@ -17,6 +17,7 @@
         segments = 16,
         rings = 16,
         color = 0xcc0000,
+        rotation_axis = "x",
       } = this.params;
 
       let material = new this.THREE.MeshBasicMaterial({
@@ -32,11 +33,13 @@
 
       obj3d.rotation.x = 90;
 
+      this.params.rotation_axis = rotation_axis;
+
       return obj3d;
     }
 
     update(event) {
-      event.target.rotation.x -= 0.2 / 1000;
+      event.target.rotation[this.params.rotation_axis] -= 0.2 / 1000;
     }
   }
 
@@ -77,24 +80,28 @@
   let z = -50;
   let spheres = [
     new WireframeSphere({
+      rotation_axis: "y",
       z: z,
       y: rand_coord(),
       x: rand_coord(),
       color: 0x663333,
     }),
     new WireframeSphere({
+      rotation_axis: "x",
       z: z,
       y: rand_coord(),
       x: rand_coord(),
       color: 0x663333,
     }),
     new WireframeSphere({
+      rotation_axis: "z",
       z: z,
       y: rand_coord(),
       x: rand_coord(),
       color: 0x663333,
     }),
     new WireframeSphere({
+      rotation_axis: "x",
       z: z,
       y: rand_coord(),
       x: rand_coord(),
