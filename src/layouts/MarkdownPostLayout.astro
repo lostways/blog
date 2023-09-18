@@ -6,10 +6,13 @@ const postDate = new Date(frontmatter.createdAt);
 frontmatter.createdAt = postDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <BaseLayout pageTitle="Notes">
-<div class="blog-date">{frontmatter.createdAt}</div>
-<div class="blog-description">{frontmatter.description}</div>
+  <div class="blog-header">
+    <div class="blog-title"><h1>{frontmatter.title}</h1></div>
+    <div class="blog-description">{frontmatter.description}</div>
+    <!-- <div class="blog-date">{frontmatter.createdAt}</div>-->
+    <img class="blog-hero-image" src={frontmatter.heroImage} alt={frontmatter.title} />
+  </div>
 <div class="blog-content">
-<img src={frontmatter.heroImage} alt={frontmatter.title} />
 <h1>{frontmatter.title}</h1>
 <slot />
 </div>
