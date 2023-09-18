@@ -85,6 +85,8 @@ header h1 {
 	padding-bottom: 0px;
 	font-size: 3rem;
   margin: 0px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .nav-title {
@@ -152,9 +154,10 @@ header h1 {
   color: var(--gray-80);
 }
 
-.blog-post p {
+.blog-post p.blog-description {
  margin: 0px;
  color: var(--gray-70);
+ font-family: 'Georgia', 'serif';
 } 
 
 .tags {
@@ -191,6 +194,7 @@ header h1 {
 }
 
 .blog-description {
+	font-family: 'Roboto', sans-serif;
 }
 
 .blog-hero-image {

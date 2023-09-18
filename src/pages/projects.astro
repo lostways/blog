@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+const allPosts = await Astro.glob('../pages/posts/*.md');
+const pageTitle = "Projects";
+const subtitle = "What I have been working on";
+
+const posts = allPosts.filter((post) => post.frontmatter.project === true);
+---
+
+<BaseLayout pageTitle={pageTitle} subtitle={subtitle}>
+	<div class="blog-posts">
+    {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.heroImage}/>)}
+	</div>
+</BaseLayout>

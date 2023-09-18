@@ -1,11 +1,13 @@
 ---
 description: Pomodoro timer in your terminal
 public: true
+project: true
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Pypomodoro
 createdAt: 1694994810093
-updatedAt: 1694999052048
-tags: []
+updatedAt: 1695032873879
+tags:
+  - projects
 heroImage: /posts/pypomodoro_thumbnail.png
 slug: pypomodoro
 ---

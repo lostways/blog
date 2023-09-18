@@ -4,8 +4,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const { frontmatter } = Astro.props;
 const postDate = new Date(frontmatter.createdAt);
 frontmatter.createdAt = postDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+const isProject = frontmatter.project === true;
 ---
-<BaseLayout pageTitle="Notes">
+<BaseLayout pageTitle={isProject === true ? 'Projects' : 'Notes'}>
   <div class="blog-header">
     <div class="blog-title"><h1>{frontmatter.title}</h1></div>
     <div class="blog-description">{frontmatter.description}</div>

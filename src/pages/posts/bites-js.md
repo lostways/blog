@@ -1,11 +1,13 @@
 ---
 public: true
 description: A NIBBLES.BAS Clone In JavaScript
+project: true
 layout: ../../layouts/MarkdownPostLayout.astro
 title: BitesJs
 createdAt: 1694582888921
-updatedAt: 1694936197742
-tags: []
+updatedAt: 1695032780387
+tags:
+  - projects
 heroImage: /posts/bites-js_thumbnail.png
 slug: bites-js
 ---
