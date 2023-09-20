@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Home Page";
-const subtitle = "My awesome blog subtitle";
+const pageTitle = "Home";
+const subtitle = "My home on the web since 1999";
 ---
 <BaseLayout pageTitle={pageTitle} subtitle={subtitle}>
+  <div class="home-page">
+    <p>Welcome to Lostways. This is my corner of the web. Learn about <a href="/about">Me</a> and my <a href="/projects">projects</a>.</p>
+  </div>
 </BaseLayout>

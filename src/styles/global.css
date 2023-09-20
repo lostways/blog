@@ -228,6 +228,24 @@ header h1 {
   overflow-x: scroll;
 }
 
+.home-page {
+  text-align: center;
+}
+
+.home-page p {
+  /*font-family: 'Roboto', sans-serif;*/
+	font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--gray-80);
+}
+
+.home-page a {
+  color: var(--orange);
+  text-transform: uppercase;
+}
+
 footer {
 	display: flex;
 	gap: 1rem;
@@ -236,8 +254,6 @@ footer {
 	color: #dddddd;
 	background-color: transparent;
 }
-
-
 
 .background-sphere {
 	position: fixed;
