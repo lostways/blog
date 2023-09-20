@@ -5,7 +5,7 @@ project: true
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Andrew BBS
 createdAt: 1695025201595
-updatedAt: 1695032860877
+updatedAt: 1695032873879
 tags:
   - projects
 heroImage: /posts/andrew-bbs_thumbnail.png
