@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectLink from '../components/ProjectLink.astro';
 
 const { frontmatter } = Astro.props;
 const postDate = new Date(frontmatter.createdAt);
@@ -14,7 +15,11 @@ const isProject = frontmatter.project === true;
     <img class="blog-hero-image" src={frontmatter.heroImage} alt={frontmatter.title} />
   </div>
 <div class="blog-content">
-<h1>{frontmatter.title}</h1>
+  <h1>{frontmatter.title}
+     {frontmatter.links && Object.keys(frontmatter.links).map((key) => (
+        <ProjectLink type={key} url={frontmatter.links[key]} />
+      ))}
+  </h1>
 <slot />
 </div>
 </BaseLayout>

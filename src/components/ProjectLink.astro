@@ -1,0 +1,12 @@
+---
+import { Icon } from 'astro-icon';
+
+const { type, url } = Astro.props;
+const icons = {
+  'web': 'mdi:web',
+  'github': 'mdi:github',
+}
+---
+<a class="project-link" href={url} target="_blank" rel="noopener noreferrer">
+  <Icon name={icons[type]} />
+</a>

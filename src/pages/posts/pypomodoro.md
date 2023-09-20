@@ -2,10 +2,12 @@
 description: Pomodoro timer in your terminal
 public: true
 project: true
+links:
+  github: https://github.com/lostways/pypomodoro
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Pypomodoro
 createdAt: 1694994810093
-updatedAt: 1695032873879
+updatedAt: 1695200051660
 tags:
   - projects
 heroImage: /posts/pypomodoro_thumbnail.png

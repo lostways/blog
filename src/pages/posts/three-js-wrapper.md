@@ -2,12 +2,13 @@
 description: a lightweight framework for using Three.js
 public: true
 project: true
-web: https://threejswrapper.com/
-github: https://github.com/lostways/three-js-wrapper
+links:
+  web: https://threejswrapper.com/
+  github: https://github.com/lostways/three-js-wrapper
 layout: ../../layouts/MarkdownPostLayout.astro
 title: ThreeJS Wrapper
 createdAt: 1695191470316
-updatedAt: 1695193032325
+updatedAt: 1695198673905
 tags:
   - projects
 heroImage: /posts/three-js-wrapper_thumbnail.png

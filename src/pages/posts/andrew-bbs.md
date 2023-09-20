@@ -2,10 +2,13 @@
 description: An experiment in "deep web" content management
 public: true
 project: true
+links:
+  web: https://andrewbbs.net/
+  github: https://github.com/lostways/andrewbbs
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Andrew BBS
 createdAt: 1695025201595
-updatedAt: 1695032873879
+updatedAt: 1695201146742
 tags:
   - projects
 heroImage: /posts/andrew-bbs_thumbnail.png

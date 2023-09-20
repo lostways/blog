@@ -1,14 +1,4 @@
 ---
 const { platform, username } = Astro.props;
 ---
-<style>
-	a, a:visited, a:hover {
-	 	font-weight: bold;
-		text-transform: capitalize;
-    background-color: none;
-    text-decoration: none;
-  }
-</style>
-
 <a class="social-link" href={`https://www.${platform}.com/${username}`}>{platform}</a>
-
