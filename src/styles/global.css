@@ -221,6 +221,14 @@ header h1 {
   color: var(--orange);
 }
 
+.blog-content img {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  margin-top: 1rem;
+}
+
 .astro-code {
   background-color: var(--gray-20);
   padding: 1rem;
@@ -230,12 +238,13 @@ header h1 {
 
 .home-page {
   text-align: center;
+  margin: 0 auto;
 }
 
 .home-page p {
   /*font-family: 'Roboto', sans-serif;*/
 	font-family: 'Cormorant Garamond', serif;
-  font-size: 5rem;
+  font-size: clamp(2.3rem, 7vmin, 5rem);
   font-weight: bold;
   text-transform: uppercase;
   color: var(--gray-80);
