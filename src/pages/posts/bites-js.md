@@ -3,12 +3,12 @@ public: true
 description: A NIBBLES.BAS Clone In JavaScript
 project: true
 links:
-  web: https://lostways.com/bitesjs/
+  web: https://lostways.github.io/BitesJs/
   github: https://github.com/lostways/BitesJs
 layout: ../../layouts/MarkdownPostLayout.astro
 title: BitesJs
 createdAt: 1694582888921
-updatedAt: 1695200302784
+updatedAt: 1695388354094
 tags:
   - projects
 heroImage: /posts/bites-js_thumbnail.png
