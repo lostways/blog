@@ -2,46 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "About Me";
-const subtitle = "... and my new Astro site!";
+const subtitle = "What do you want to know?";
 
-const me = {
-	firstName: "Andrew",
-	country: "USA",
-	occupation: "Software Engineer",
-	hobbies: ["Music", "Crytography", "Experience Design", "Art"],
-};
-
-const skills = ["Python", "JavaScript", "PHP"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "pink";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
-<style define:vars={{skillColor, fontWeight, textCase}}>
-		.skill {
-			color: var(--skillColor);
-			font-weight: var(--fontWeight);
-			text-transform: var(--textCase);
-		}
-</style>
 	<BaseLayout pageTitle={pageTitle} subtitle={subtitle}>
-	<p>Facts about me</p>
-	<ul>
-		<li>My name is {me.firstName}.</li>
-		<li>I live in {me.country} and I work as a {me.occupation}.</li>
-		{me.hobbies.length >= 2 &&
-			<li>Two of my hobbies are: {me.hobbies[0]} and {me.hobbies[1]}</li>
-		}
-	</ul>
-	<p>My skills are:</p>
-	<ul>
-		{skills.map((skill) => <li class="skill">{skill}</li>)}
-	</ul>
-	{happy && <p>I am happy to be learning Astro!</p>}
-	{finished && <p>I finished this tutorial!</p>}
-	{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    <div class="about-page">
+      <p>I am a <a href="https://www.linkedin.com/in/andrew-lowe-3473985/">software engineer</a>, <a href="https://m57.cc/">content creator</a>, and sometimes <a href="https://soundcloud.com/alowe">musician.</a></p>
+      <p>I like long walks in post-apocalyptic cityscapes and vanilla ice cream.</p>
+    </div>
 </BaseLayout>

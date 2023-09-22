@@ -244,15 +244,31 @@ header h1 {
 .home-page p {
   /*font-family: 'Roboto', sans-serif;*/
 	font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.3rem, 7vmin, 5rem);
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: clamp(2.3rem, 7vmin, 6rem);
+  font-weight: normal;
   color: var(--gray-80);
 }
 
 .home-page a {
   color: var(--orange);
   text-transform: uppercase;
+}
+
+.about-page {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.about-page p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5vmin;
+  font-weight: normal;
+  color: var(--gray-80);
+}
+
+.about-page a {
+  color: var(--orange);
+  text-transform: capitalize;
 }
 
 footer {
