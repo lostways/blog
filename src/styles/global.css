@@ -211,6 +211,7 @@ header h1 {
 
 .blog-content {
 	max-width: 80ch;
+  font-size: 1.25rem;
 }
 
 .blog-content h1 {
